@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="container px-5">
+        <h1 class="bg-info text-white text-center mb-3">Bài tập mảng</h1>
+        <div class="bt-content px-5">
+          <div class="mb-3 col-5">
+            <label for="" class="form-label"></label>
+            <input
+              type="number"
+              class="form-control"
+              name=""
+              id="mangSo"
+              aria-describedby="helpId"
+              placeholder="Nhập số cần thêm vào mảng"
+            />
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-secondary text-white mb-3"
+            id="themMang"
+          >
+            Thêm số
+          </button>
+          <button type="button" class="btn btn-danger mb-3 mx-2" id="clear">
+            Clear
+          </button>
+
+          <p class="bg-success mt-2 py-3 mb-5 text-white" id="showMang">
+            Mảng đang xét là: []
+          </p>
+
+          <div class="d-flex align-items-start mt-5">
+            <div
+              class="nav flex-column nav-pills me-3 col-4"
+              id="v-pills-tab"
+              role="tablist"
+              aria-orientation="vertical"
+            >
+              <button
+                class="nav-link active"
+                id="bt-1-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bt-1"
+                type="button"
+                role="tab"
+                aria-controls="bt-1"
+                aria-selected="true"
+              >
+                <i class="fa-solid fa-1"></i> <span>. Tổng số dương</span>
+              </button>
+              <button
+                class="nav-link"
+                id="bt-2-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bt-2"
+                type="button"
+                role="tab"
+                aria-controls="bt-2"
+                aria-selected="false"
+              >
+                <i class="fa-solid fa-2"></i> <span>. Đếm số dương</span>
+              </button>
+              <button
+                class="nav-link"
+                id="bt-3-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bt-3"
+                type="button"
+                role="tab"
+                aria-controls="bt-3"
+                aria-selected="false"
+              >
+                <i class="fa-solid fa-3"></i> <span>. Tìm số nhỏ nhất</span>
+              </button>
+              <button
+                class="nav-link"
+                id="bt-4-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bt-4"
+                type="button"
+                role="tab"
+                aria-controls="bt-4"
+                aria-selected="false"
+              >
+                <i class="fa-solid fa-4"></i>
+                <span>. Tìm số dương nhỏ nhất</span>
+              </button>
+
+              <button
+                class="nav-link"
+                id="bt-5-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bt-5"
+                type="button"
+                role="tab"
+                aria-controls="bt-5"
+                aria-selected="true"
+              >
+                <i class="fa-solid fa-5"></i>
+                <span>. Tìm số chẵn cuối cùng</span>
+              </button>
+              <button
+                class="nav-link"
+                id="bt-6-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bt-6"
+                type="button"
+                role="tab"
+                aria-controls="bt-6"
+                aria-selected="true"
+              >
+                <i class="fa-solid fa-6"></i> <span>. Đổi chỗ</span>
+              </button>
+              <button
+                class="nav-link"
+                id="bt-7-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bt-7"
+                type="button"
+                role="tab"
+                aria-controls="bt-7"
+                aria-selected="true"
+              >
+                <i class="fa-solid fa-7"></i> <span>. Sắp xếp tăng dần</span>
+              </button>
+              <button
+                class="nav-link"
+                id="bt-8-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bt-8"
+                type="button"
+                role="tab"
+                aria-controls="bt-8"
+                aria-selected="true"
+              >
+                <i class="fa-solid fa-8"></i>
+                <span>. Tìm số nguyên tố đầu tiên</span>
+              </button>
+              <button
+                class="nav-link"
+                id="bt-9-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bt-9"
+                type="button"
+                role="tab"
+                aria-controls="bt-9"
+                aria-selected="true"
+              >
+                <i class="fa-solid fa-9"></i> <span>. Đếm số nguyên</span>
+              </button>
+              <button
+                class="nav-link"
+                id="bt-10-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#bt-10"
+                type="button"
+                role="tab"
+                aria-controls="bt-10"
+                aria-selected="true"
+              >
+                <i class="fa-solid fa-1"></i><i class="fa-solid fa-0"></i>
+                <span>. So sánh số lượng số âm và dương</span>
+              </button>
+            </div>
+            <div class="tab-content col-8" id="v-pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="bt-1"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab"
+              >
+                <button type="button" class="btn btn-primary" id="tinhTong">
+                  Tính tổng
+                </button>
+                <p
+                  class="bg-success mt-2 py-3 mb-5 text-white"
+                  id="ketQuaTinhTong"
+                ></p>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bt-2"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+              >
+                <button type="button" class="btn btn-primary" id="demSo">
+                  Đếm số
+                </button>
+                <p
+                  class="bg-success mt-2 py-3 mb-5 text-white"
+                  id="ketQuaDemSo"
+                ></p>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bt-3"
+                role="tabpanel"
+                aria-labelledby="v-pills-messages-tab"
+              >
+                <button type="button" class="btn btn-primary" id="timSoNhoNhat">
+                  Tìm số nhỏ nhất
+                </button>
+                <p
+                  class="bg-success mt-2 py-3 mb-5 text-white"
+                  id="ketQuaTimSoMin"
+                ></p>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bt-4"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tab"
+              >
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="timSoNhoNhatDuong"
+                >
+                  Tìm số dương nhỏ nhất
+                </button>
+                <p
+                  class="bg-success mt-2 py-3 mb-5 text-white"
+                  id="ketQuaTimSoMinPos"
+                ></p>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bt-5"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tab"
+              >
+                <button type="button" class="btn btn-primary" id="timSoChan">
+                  Tìm số chẵn
+                </button>
+                <p
+                  class="bg-success mt-2 py-3 mb-5 text-white"
+                  id="ketQuaTimSoChan"
+                ></p>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bt-6"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tab"
+              >
+                <div class="row">
+                  <div class="mb-3 col-6">
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name=""
+                      id="viTri1"
+                      aria-describedby="helpId"
+                      placeholder="Nhập vị trí 1"
+                    />
+                  </div>
+                  <div class="mb-3 col-6">
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name=""
+                      id="viTri2"
+                      aria-describedby="helpId"
+                      placeholder="Nhập vị trí 2"
+                    />
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="doiCho">
+                  Đổi chỗ
+                </button>
+                <p
+                  class="bg-success mt-2 py-3 mb-5 text-white"
+                  id="ketQuaDoiCho"
+                ></p>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bt-7"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tab"
+              >
+                <button type="button" class="btn btn-primary" id="sapXep">
+                  Sắp xếp
+                </button>
+                <p
+                  class="bg-success mt-2 py-3 mb-5 text-white"
+                  id="ketQuaSapXep"
+                ></p>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bt-8"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tab"
+              >
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="timSoNguyenTo"
+                >
+                  Tìm số nguyên tố
+                </button>
+                <p
+                  class="bg-success mt-2 py-3 mb-5 text-white"
+                  id="ketQuaTimSoNT"
+                ></p>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bt-9"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tab"
+              >
+                <button type="button" class="btn btn-primary" id="demSoNguyen">
+                  Đếm số nguyên
+                </button>
+                <p
+                  class="bg-success mt-2 py-3 mb-5 text-white"
+                  id="ketQuaDemSoNguyen"
+                ></p>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bt-10"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tab"
+              >
+                <button type="button" class="btn btn-primary" id="soSanh">
+                  So sánh
+                </button>
+                <p
+                  class="bg-success mt-2 py-3 mb-5 text-white"
+                  id="ketQuaSoSanh"
+                ></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
